@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block div %}
+<section id="main">
+    <div id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <h1 class="widget-title" style="font-size: medium">添加新文章</h1>
+        <form class="widget" action="{{ url_for('admin.new') }}" method="post">
+            <div>
+                <input class="input-xlarge" type="text" name="title" placeholder="标题">
+            </div>
+            <div>
+                <textarea rows="8" name="content" placeholder="添加内容"
+                          style="width:;width: -webkit-fill-available;height: 430px;"></textarea>
+            </div>
+            <div>
+                分类:<br>
+                <select name="categorie">
+                    <option value="技术">技术</option>
+                    <option value="语学">语学</option>
+                    <option value="休闲">休闲</option>
+                </select>
+            </div>
+            <div>
+                标签(空格隔开):<br>
+                <input name="tags" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">提交</button>
+        </form>
+    </div>
+</section>
+{% include "_aside.html" %}
+{% endblock %}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "content": "阿迪王",
+    "nickname": "Shadow",
+    "email": "阿达",
+    "article_id": 1
+  },
+  {
+    "id": 2,
+    "content": "ad",
+    "nickname": "ishi",
+    "email": "shimeng407@gmail.com",
+    "article_id": 1
+  }
+]

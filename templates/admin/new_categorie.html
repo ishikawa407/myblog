@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加新分类</title>
+</head>
+<body>
+    <div>
+        <form action="{{ url_for('admin.add_categorie') }}" method="post">
+            <div>
+                <input name="name" placeholder="请输入新分类名">
+            </div>
+            <button type="submit">确定</button>
+        </form>
+    </div>
+</body>
+</html>

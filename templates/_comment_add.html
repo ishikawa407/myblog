@@ -1,0 +1,13 @@
+    <div>
+        <h1 class="widget-title" style="font-size: medium">添加评论</h1>
+        <form class="widget" method="post" action="{{ url_for('article.add_comment', id=1) }}">
+            <div>
+                <input class="input-xlarge" type="text" name="nickname" placeholder="昵称">
+                <input class="input-xlarge" type="text" name="email" placeholder="邮箱">
+            </div>
+            <div>
+                <textarea rows="8" name="content" placeholder="添加评论" style="width:;width: -webkit-fill-available;"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">提交</button>
+        </form>
+    </div>

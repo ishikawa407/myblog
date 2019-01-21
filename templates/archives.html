@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block div %}
+    <section id="main">
+        <section class="archives-wrap">
+            {% for y in ys %}
+                <div class="archive-year-wrap">
+                    <a href="/archives/2017" class="archive-year">{{ y }}</a>
+                </div>
+
+                <div class="archives">
+                   {% for a in articles if a.time_y_m_d()[0] == y %}
+                    <article class="archive-article archive-type-post">
+                        <div class="archive-article-inner">
+                            <header class="archive-article-header">
+                                <a href="/2017/03/02/udacity课程ios开发实践项目2 - 机器人迷宫2/" class="archive-article-date">
+                                    <time datetime="2017-03-02T08:39:00.000Z" itemprop="datePublished">{{ a.time_y_m_d()[1] }}月{{ a.time_y_m_d()[2] }}日</time>
+                                </a>
+                                <h1 itemprop="name">
+                                    <a class="archive-article-title" href="/2017/03/02/udacity课程ios开发实践项目2 - 机器人迷宫2/">{{ a.title }}</a>
+                                </h1>
+                            </header>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+    </section>
+    {% include "_aside.html" %}
+{% endblock %}
+

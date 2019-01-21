@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Shimeng's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="石孟 的个人博客">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shi Meng's Blog">
+    <meta property="og:url" content="http://weicfd.github.io/index.html">
+    <meta property="og:site_name" content="Shi Meng's Blog">
+    <meta property="og:description" content="石孟 的个人博客">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shi Meng's Blog">
+    <meta name="twitter:description" content="石孟 的个人博客">
+
+    <link rel="alternative" href="/atom.xml" title="Shi meng's Blog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+    <!-- 加载gitment的css和js文件 -->
+    <script src="/static/js/gitment.js"></script>
+    <script src="//bdimg.share.baidu.com/static/api/js/share.js?cdnversion=429415"></script>
+</head>
+<body>
+<div id="container">
+    <div id="wrap">
+        <header id="header">
+            <div id="banner"></div>
+            <div id="header-outer" class="outer">
+                <div id="header-title" class="inner">
+                    <h1 id="logo-wrap">
+                        <a href="/" id="logo">Shi Meng's Blog</a>
+                    </h1>
+
+                    <h2 id="subtitle-wrap">
+                        <a href="/" id="subtitle">我ら思う、故に我ら在り</a>
+                    </h2>
+
+                </div>
+                <div id="header-inner" class="inner">
+                    <nav id="main-nav">
+                        <a id="main-nav-toggle" class="nav-icon"></a>
+
+                        <a class="main-nav-link" href="/">Home</a>
+
+                        <a class="main-nav-link" href="/archives">Archives</a>
+
+                        <a class="main-nav-link" href="/about">About</a>
+
+                    </nav>
+                    <nav id="sub-nav">
+
+                        <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+
+                        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+                    </nav>
+                    <div id="search-form-wrap">
+                        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+                            <input type="search" name="word" maxlength="20" class="search-form-input"
+                                   placeholder="Search">
+                            <input type="submit" value="" class="search-form-submit">
+                            <input name="tn" type="hidden" value="bds">
+                            <input name="cl" type="hidden" value="3">
+                            <input name="ct" type="hidden" value="2097152">
+                            <input type="hidden" name="si" value="weicfd.github.io">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="outer">
+            {% block div %}
+            {% endblock %}
+        </div>
+        <footer id="footer">
+
+            <div class="outer">
+                <div id="footer-info" class="inner">
+                    ©2018 Shi Meng<br>
+                    Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
+                    .
+                    Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <nav id="mobile-nav">
+
+        <a href="/" class="mobile-nav-link">Home</a>
+
+        <a href="/archives" class="mobile-nav-link">Archives</a>
+
+        <a href="/About" class="mobile-nav-link">About</a>
+
+    </nav>
+    <!-- totop start -->
+    <div id="totop">
+        <a title="返回顶部"><img src="/img/scrollup.png"></a>
+    </div>
+
+    <!-- totop end -->
+
+
+    <!-- 百度分享 start -->
+
+    <div id="article-share-box" class="article-share-box">
+        <div id="bdshare" class="bdsharebuttonbox article-share-links">
+            <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+            <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+            <a class="article-share-more" data-cmd="more" title="更多"></a>
+        </div>
+    </div>
+    <script>
+  function SetShareData(cmd, config) {
+    if (shareDataTitle && shareDataUrl) {
+      config.bdText = shareDataTitle;
+      config.bdUrl = shareDataUrl;
+    }
+    return config;
+  }
+  window._bd_share_config={
+    "common":{onBeforeClick: SetShareData},
+    "share":{"bdCustomStyle":"/css/bdshare.css"}
+  };
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+
+    </script>
+
+    <!-- 百度分享 end -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <script src="/js/script.js"></script>
+
+</div>
+
+
+</body>
+</html>

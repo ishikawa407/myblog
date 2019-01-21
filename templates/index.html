@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block div%}
+    <section id="main">
+        {% for a in articles %}
+        <article id="post-udacity" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <div class="article-meta">
+                <a href="{{ url_for('article.article_detail', id=a.id) }}" class="article-date">
+                    <time datetime="2017-03-02T08:39:00.000Z" itemprop="datePublished">{{ a.local_time() }}</time>
+                </a>
+                <div class="article-category">
+                    <a class="article-category-link" href="/categories/技术/">{{ a.categorie }}</a>
+                </div>
+            </div>
+            <div class="article-inner">
+                <header class="article-header">
+                    <h1 itemprop="name">
+                        <a class="article-title" href="{{ url_for('article.article_detail', id=a.id) }}">{{ a.title }}</a>
+                    </h1>
+                </header>
+                <div class="article-entry" itemprop="articleBody">
+                    {{ a.content }}
+                    <p class="article-more-link">
+                        <a href="{{ url_for('article.article_detail', id=a.id) }}">Read More</a>
+                    </p>
+                </div>
+                <footer class="article-footer">
+                    {% if a.tags %}
+                    <ul class="article-tag-list">
+
+                        {% for tag in a.tags %}
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">{{ tag }}</a></li>
+                        {% endfor %}
+
+                    </ul>
+                    {% endif %}
+                </footer>
+            </div>
+            <div id="gitment"></div>
+            <!-- 主页不要加载gitment -->
+        </article>
+        {% endfor %}
+    </section>
+    {% include '_aside.html' %}
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block div %}
+<section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-meta">
+            <a href="/About/index.html" class="article-date">
+                <time>{{ article.local_time() }}</time>
+            </a>
+        </div>
+        <div class="article-inner">
+            <header class="article-header">
+                <h1 class="article-title" itemprop="name">
+                    {{ article.title }}
+                </h1>
+            </header>
+            <div class="article-entry" itemprop="articleBody">
+                {{ article.content }}
+            </div>
+
+        </div>
+    </article>
+    <nav id="article-nav">
+
+        <a href="/2017/03/02/udacity课程ios开发实践项目2 - 机器人迷宫2/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">
+
+                Udacity课程ios开发实践项目2 - 机器人迷宫2
+
+            </div>
+        </a>
+
+
+        <a href="/2017/01/15/Hexo与Octopress搭建博客的比较/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">Hexo与Octopress搭建博客的比较</div>
+        </a>
+
+    </nav>
+
+     <div style="margin-bottom: 10px;" >
+        <h1 class="widget-title" style="font-size: medium">评论列表</h1>
+        <ul class="widget">
+            {% if article.get_comments() %}
+            {% for c in article.get_comments() %}
+            <li >
+                <div>
+                    <a href="/user/%E7%9F%B3%E5%AD%9F">
+                        <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/2436aa672443983b81526ae5391c3ece?s=40&amp;d=identicon&amp;r=g">
+                    </a>
+                </div>
+                <div class>
+                <div><span class="" data-timestamp="2018-11-20T07:47:10Z" data-format="fromNow(0)" data-refresh="0" style="">2 months ago</span></div>
+                <div><a href="/user/%E7%9F%B3%E5%AD%9F">{{ c.nickname }}</a></div>
+                <div>
+                    {{ c.content }}
+                </div>
+                </div>
+             </li>
+            {% endfor %}
+            {% else %}
+            暂时还没有评论
+            {% endif %}
+        </ul>
+    </div>
+
+
+    {% include "_comment_add.html"%}
+</section>
+{% include "_aside.html" %}
+{% endblock %}
